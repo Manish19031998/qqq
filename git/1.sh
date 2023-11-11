@@ -10,7 +10,7 @@ read -p "write your location - " a
 
 mkdir -p $a
 
-podman run -dt --name openldap-container -p 3389:3389 -v $a/data:/data -e DS_SUFFIX=dc=finoptaplus,dc=com -e DS_DM_PASSWORD=1 quay.io/389ds/dirsrv
+podman run -dt --name openldap-container -p 3389:3389 -v $a:/data -e DS_SUFFIX=dc=finoptaplus,dc=com -e DS_DM_PASSWORD=1 quay.io/389ds/dirsrv
 
 podman exec -it openldap-container dsconf -D "cn=Directory Manager" ldap://localhost:3389 backend suffix list
 
