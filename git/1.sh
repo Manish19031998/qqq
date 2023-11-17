@@ -3,7 +3,7 @@
 set -eu
 
 
-echo "It is manish location /home/manish/data"
+echo "It is manish chaudhary location /home/manish/data"
 echo "now write your location" 
 echo "your current path is  $(pwd)"
 read -p "write your location - " a
